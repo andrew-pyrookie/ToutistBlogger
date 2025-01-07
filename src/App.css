@@ -1,0 +1,368 @@
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(90deg, #007bff, #ffc107); /* Blue to Yellow gradient */
+    color: black; /* Contrasts nicely with the background */
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger-bar {
+    background: #000; /* Black for contrast */
+    height: 3px;
+    width: 25px;
+    margin: 4px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem; /* Increased spacing between links */
+    list-style: none; /* Removes default list dots */
+    margin: 0; /* Ensures consistent alignment */
+    padding: 0; /* Removes extra padding */
+}
+
+.nav-links li a {
+    text-decoration: none; /* Removes underline */
+    color: black; /* Matches the theme */
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #fff; /* Changes color on hover for better UX */
+}
+
+.nav-links.open {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Adds spacing between items in mobile view */
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+}
+
+/* LandingPage */
+.landing-page {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .heading {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 3rem;
+  }
+  
+  @media (max-width: 768px) {
+    .heading {
+      font-size: 1.5rem;
+    }
+  }
+
+/* Introduction Section */
+.introduction {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 2rem; /* Spacing between cards */
+    padding: 2rem;
+    background-color: #f4f4f4; /* Light background color for contrast */
+}
+
+/* Card Styling */
+.card {
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    border: 2px solid #000; /* Black border for consistency */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Image */
+.card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Card Title */
+.card h2 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.5rem;
+    color: #003366; /* Blue color */
+}
+
+/* Card Description */
+.card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Read More Button */
+.card button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #f9c400; /* Yellow button */
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #e1b400; /* Darker Yellow on hover */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .introduction {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+
+    .card {
+        margin-bottom: 2rem; /* Space between cards */
+    }
+}
+
+/* Destination */
+/* General Page Layout */
+.destinations {
+    font-family: 'Arial', sans-serif;
+    padding: 1rem;
+    background: linear-gradient(120deg, #007bff, #ffcc00, #000);
+    color: #fff;
+  }
+  
+  /* Navigation Buttons */
+  .city-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .nav-button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    background: #ffcc00;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .nav-button:hover {
+    transform: scale(1.1);
+    background: #007bff;
+    color: #fff;
+  }
+  
+  /* Section Styling */
+  .city-section {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .city-section h2 {
+    font-size: 2rem;
+    color: #ffcc00;
+  }
+  
+  .city-section h3 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #007bff;
+  }
+  
+  .city-section ul {
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
+  }
+  
+  .city-section ul li {
+    list-style: square;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Recommended Section */
+  .recommended-section {
+    margin-top: 4rem;
+  }
+  
+  .recommended-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ffcc00;
+  }
+  
+  .category {
+    margin-bottom: 2rem;
+  }
+  
+  .category h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #007bff;
+  }
+  
+  .category ul li {
+    list-style: circle;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .city-nav {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .nav-button {
+      padding: 0.5rem 1rem;
+    }
+  }
+
+/* experinces */
+.experiences-page {
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+  
+  .experience-card {
+    background-color: #1e3a8a; /* Tailwind's blue-900 */
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .image-placeholder {
+    background-color: #facc15; /* Tailwind's yellow-500 */
+    height: 12rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .experience-card {
+      flex-direction: row;
+    }
+    .image-placeholder {
+      margin-bottom: 0;
+      margin-right: 1.5rem;
+    }
+  }
+/* Itinerary */
+.itinerary-page {
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+  
+  .itinerary-card {
+    background-color: #1e3a8a; /* Tailwind's blue-900 */
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .image-placeholder {
+    background-color: #facc15; /* Tailwind's yellow-500 */
+    height: 12rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .itinerary-card {
+      flex-direction: row;
+    }
+    .image-placeholder {
+      margin-bottom: 0;
+      margin-right: 1.5rem;
+    }
+  }
+  
