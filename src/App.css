@@ -183,7 +183,25 @@
 }
 
 /* Destination */
-/* General Page Layout */
+.italy-map-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.italy-map {
+  width: 60%; /* Set the width to 60% of the container */
+  max-width: 200px; /* Optional: Limit the max width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Optional: Add a hover effect */
+}
+
+.italy-map:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+
 .destinations {
     font-family: 'Arial', sans-serif;
     padding: 1rem;
@@ -286,83 +304,235 @@
   }
 
 /* experinces */
+/* Experiences */
 .experiences-page {
-    background-color: black;
-    color: white;
-    min-height: 100vh;
-    padding: 2rem;
-  }
-  
+  background: linear-gradient(120deg, #007bff, #ffcc00, #000); /* Gradient background */
+  color: white;
+  padding: 2rem;
+}
+
+.experiences-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: black; /* Yellow color for the title */
+  margin-bottom: 2rem;
+}
+
+.experience-card {
+  background-color: rgba(255, 255, 255, 0.4); /* Semi-transparent background */
+  backdrop-filter: blur(5px); /* Apply blur effect to the background */
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.experience-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.experience-content {
+  text-align: center;
+}
+
+.experience-title {
+  font-size: 1.8rem;
+  color: black; /* Yellow for titles */
+  margin-bottom: 0.5rem;
+}
+
+.experience-description {
+  font-size: 1rem;
+  color: #f4f4f4; /* Light text color */
+}
+
+
+@media (min-width: 768px) {
   .experience-card {
-    background-color: #1e3a8a; /* Tailwind's blue-900 */
-    border-radius: 0.5rem;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .image-placeholder {
-    background-color: #facc15; /* Tailwind's yellow-500 */
-    height: 12rem;
-    width: 100%;
-    border-radius: 0.5rem;
-    display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: black;
-    margin-bottom: 1rem;
   }
-  
-  @media (min-width: 768px) {
-    .experience-card {
-      flex-direction: row;
-    }
-    .image-placeholder {
-      margin-bottom: 0;
-      margin-right: 1.5rem;
-    }
+
+  .experience-image {
+    width: 30%;
+    margin-right: 1rem;
   }
+
+  .experience-content {
+    text-align: left;
+  }
+}
+
 /* Itinerary */
 .itinerary-page {
-    background-color: black;
-    color: white;
-    min-height: 100vh;
-    padding: 2rem;
-  }
-  
+  background: linear-gradient(120deg, #007bff, #ffcc00, #000); /* Gradient background */
+  color: white;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.itinerary-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: black; /* Yellow color for the title */
+  margin-bottom: 2rem;
+}
+
+.itinerary-card {
+  background-color: rgba(255, 255, 255, 0.4); /* Semi-transparent background */
+  backdrop-filter: blur(5px); /* Apply blur effect to the background */
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.itinerary-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.image-placeholder {
+  background-color: transparent; /* Remove the yellow background */
+  height: 12rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 1rem;
+  overflow: hidden; /* Prevent image overflow */
+}
+
+.experience-image {
+  object-fit: cover; /* Ensure the image covers the box completely */
+  width: 100%; /* Make image fill the container width */
+  height: 100%; /* Ensure image fills the height of the container */
+}
+
+.experience-content {
+  text-align: center;
+}
+
+.experience-title {
+  font-size: 1.8rem;
+  color: black; /* Yellow for titles */
+  margin-bottom: 0.5rem;
+}
+
+.experience-description {
+  font-size: 1rem;
+  color: #f4f4f4; /* Light text color */
+}
+
+@media (min-width: 768px) {
   .itinerary-card {
-    background-color: #1e3a8a; /* Tailwind's blue-900 */
-    border-radius: 0.5rem;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .image-placeholder {
-    background-color: #facc15; /* Tailwind's yellow-500 */
-    height: 12rem;
-    width: 100%;
-    border-radius: 0.5rem;
-    display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: black;
-    margin-bottom: 1rem;
   }
-  
-  @media (min-width: 768px) {
-    .itinerary-card {
-      flex-direction: row;
-    }
-    .image-placeholder {
-      margin-bottom: 0;
-      margin-right: 1.5rem;
-    }
+
+  .image-placeholder {
+    margin-bottom: 0;
+    margin-right: 1.5rem;
   }
-  
+
+  .experience-content {
+    text-align: left;
+  }
+}
+
+/* Blog Page */
+.blog-page {
+  background: linear-gradient(120deg, #007bff, #ffcc00, #000); /* Gradient background */
+  color: white;
+  padding: 2rem;
+}
+
+.blog-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: black; /* Yellow color for the title */
+  margin-bottom: 2rem;
+}
+
+.blog-card {
+  background-color: rgba(255, 255, 255, 0.4); /* Semi-transparent background */
+  backdrop-filter: blur(5px); /* Apply blur effect to the background */
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.image-placeholder {
+  background-color: transparent; /* No background color */
+  height: 12rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  overflow: hidden; /* Prevent image overflow */
+}
+
+.experience-image {
+  object-fit: cover; /* Ensure the image covers the box completely */
+  width: 100%;
+  height: 100%;
+}
+
+.experience-content {
+  text-align: center;
+}
+
+.experience-title {
+  font-size: 1.8rem;
+  color: black; /* Yellow for titles */
+  margin-bottom: 0.5rem;
+}
+
+.experience-description {
+  font-size: 1rem;
+  color: #f4f4f4; /* Light text color */
+}
+
+@media (min-width: 768px) {
+  .blog-card {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .image-placeholder {
+    margin-bottom: 0;
+    margin-right: 1.5rem;
+  }
+
+  .experience-content {
+    text-align: left;
+  }
+}

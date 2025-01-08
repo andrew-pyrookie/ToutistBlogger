@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import sandroUffizi from '../Images/sandro uffizi.jpeg';
 import leaningTower from '../Images/Leaning Tower of Pisa.jpeg';
 import foodImage from '../Images/food.webp';
@@ -16,14 +16,24 @@ const Introduction = () => {
     { title: 'Festivals', content: 'The image depicts a vibrant staircase adorned with folk art-style painted rocks, suggesting a cultural celebration or festival where community involvement and playful expression are valued, likely outside of Italy given the color palette and whimsical aesthetic.', image: paintedRocks },
   ];
 
+  const [expandedIndex, setExpandedIndex] = useState(null);
+
+  const handleReadMore = (index) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
+
   return (
     <section className="introduction">
       {rows.map((row, index) => (
         <div className="card" key={index}>
           <img src={row.image} alt={row.title} className="card-image" />
           <h2>{row.title}</h2>
-          <p>{row.content.length > 100 ? row.content.slice(0, 100) + '...' : row.content}</p>
-          <button>Read More</button>
+          <p>
+            {expandedIndex === index ? row.content : row.content.slice(0, 100) + '...'}
+          </p>
+          <button onClick={() => handleReadMore(index)}>
+            {expandedIndex === index ? 'Show Less' : 'Read More'}
+          </button>
         </div>
       ))}
     </section>

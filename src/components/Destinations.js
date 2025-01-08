@@ -1,4 +1,5 @@
 import React from 'react';
+import italyMap from '../Images/italy-map.jpeg'; // Replace with the correct path to your map image
 
 const Destinations = () => {
   const cities = [
@@ -54,6 +55,11 @@ const Destinations = () => {
 
   return (
     <div className="destinations">
+      {/* Map of Italy */}
+      <div className="italy-map-container">
+        <img src={italyMap} alt="Map of Italy" className="italy-map" />
+      </div>
+
       {/* Navigation Buttons */}
       <nav className="city-nav">
         {cities.map((city) => (
