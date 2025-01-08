@@ -1,6 +1,5 @@
 import React from 'react';
 import { FaInstagram, FaYoutube, FaTiktok } from 'react-icons/fa';
-import italyImage from '../Images/italy-map.jpeg'; // Example image of Italy (can be replaced with your own image)
 
 const AboutUs = () => {
   return (
@@ -9,11 +8,16 @@ const AboutUs = () => {
 
       <div className="about-us-card">
         <div className="image-placeholder">
-          <img
-            src={italyImage}
-            alt="Italy"
-            className="experience-image"
-          />
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12367583.749684373!2d2.1047643046663045!3d40.81852602339197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d4fe82448dd203%3A0xe22cf55c24635e6f!2sItaly!5e0!3m2!1sen!2ske!4v1736349558833!5m2!1sen!2ske"
+            width="600"
+            height="450"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Italy Map"
+          ></iframe>
         </div>
         <div className="experience-content">
           <h2 className="experience-title">Blogger's Profile</h2>
