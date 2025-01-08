@@ -536,3 +536,118 @@
     text-align: left;
   }
 }
+
+/* Gallery Section */
+.gallery-section {
+  margin-top: 3rem;
+}
+
+.gallery-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  margin-bottom: 2rem;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-item {
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.5rem;
+}
+/* AboutUs Page */
+.about-us-page {
+  background: linear-gradient(120deg, #007bff, #ffcc00, #000); /* Gradient background */
+  color: white;
+  padding: 2rem;
+}
+
+.about-us-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: black; /* Yellow color for the title */
+  margin-bottom: 2rem;
+}
+
+.about-us-card {
+  background-color: rgba(255, 255, 255, 0.4); /* Semi-transparent background */
+  backdrop-filter: blur(5px); /* Apply blur effect to the background */
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-us-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.image-placeholder {
+  background-color: transparent; /* No background color */
+  height: 12rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  overflow: hidden; /* Prevent image overflow */
+}
+
+.experience-image {
+  object-fit: cover; /* Ensure the image covers the box completely */
+  width: 100%;
+  height: 100%;
+}
+
+.experience-content {
+  text-align: center;
+}
+
+.experience-title {
+  font-size: 1.8rem;
+  color: black; /* Yellow for titles */
+  margin-bottom: 0.5rem;
+}
+
+.experience-description {
+  font-size: 1rem;
+  color: #f4f4f4; /* Light text color */
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.social-links a {
+  color: #ffcc00;
+  font-size: 2rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #fff;
+}
